@@ -1,0 +1,141 @@
+{
+   
+   "products": [
+      {
+         "id": 1,
+         "name": "Waffle with Berries",
+         "desc": "Description of Waffle",
+         "price": 6.50
+      },
+      {
+          "id": 2,
+          "name": "Vanilla Bean Crème Brûlée",
+          "desc": "Description of Crème Brûlée",
+          "price": 7.00
+       },
+       {
+          "id": 3,
+          "name": "Macaron Mix of Five",
+          "desc": "Description of Macaron",
+          "price": 8.00
+       },
+       {
+          "id": 4,
+          "name": "Classic Tiramisu",
+          "desc": "Description of Tiramisu",
+          "price": 5.50
+       },
+       {
+          "id": 5,
+          "name": "Pistachio Baklava",
+          "desc": "Description of Baklava",
+          "price": 4.00
+       },
+       {
+          "id": 6,
+          "name": "Lemon Meringue Pie",
+          "desc": "Description of Pie",
+          "price": 5.00
+       },
+       {
+          "id": 7,
+          "name": "Red Velvet Cake",
+          "desc": "Description of Cake",
+          "price": 4.50
+       },
+       {
+          "id": 8,
+          "name": "Salted Caramel Brownie",
+          "desc": "Description of Brownie",
+          "price": 4.50
+       },
+       {
+          "id": 9,
+          "name": "Vanilla Panna Cotta",
+          "desc": "Description of Panna Cotta",
+          "price": 6.50
+       }
+  ],
+    "featured_products": [
+        {
+           "id": 1,
+           "name": "Featured product 1",
+           "desc": "Description of Waffle",
+           "price": 6.50
+        },
+        {
+            "id": 2,
+            "name": "Featured product 2",
+            "desc": "Description of Crème Brûlée",
+            "price": 7.00
+         },
+         {
+            "id": 3,
+            "name": "Featured product 3",
+            "desc": "Description of Macaron",
+            "price": 8.00
+         },
+         {
+            "id": 4,
+            "name": "Featured product 4",
+            "desc": "Description of Tiramisu",
+            "price": 5.50
+         },
+         {
+            "id": 5,
+            "name": "Featured product 5",
+            "desc": "Description of Baklava",
+            "price": 4.00
+         },
+         {
+            "id": 6,
+            "name": "Featured product 6",
+            "desc": "Description of Pie",
+            "price": 5.00
+         },
+         {
+            "id": 7,
+            "name": "Featured product 7",
+            "desc": "Description of Cake",
+            "price": 4.50
+         },
+         {
+            "id": 8,
+            "name": "Featured product 8",
+            "desc": "Description of Brownie",
+            "price": 4.50
+         },
+         {
+            "id": 9,
+            "name": "Featured product 9",
+            "desc": "Description of Panna Cotta",
+            "price": 6.50
+         }
+    ],
+    "most_active_stock": {
+      "symbol": "STOCK A",
+      "price": 351.0
+    },
+    "top_gaining_stock": {
+      "symbol": "STOCK B",
+      "price": 50.0
+    },
+    "top_losing_stock": {
+      "symbol": "STOCK C",
+      "price": 100.0
+    },
+    "stocks": [
+      {
+         "symbol": "STOCK D",
+         "price": 1151.0
+      },
+      {
+         "symbol": "STOCK E",
+         "price": 100.0
+      },
+      {
+         "symbol": "STOCK F",
+         "price": 240.0
+      }
+    ]
+}
