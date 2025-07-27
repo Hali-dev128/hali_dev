@@ -3,10 +3,8 @@
 @plugin '@tailwindcss/typography';
 
 :root {
-    --sec-color: #333333;
-    /* --bg-color: #F5F2ED; */
-    --bg-color: #eee;
-    --svg-color: #f46666;
+    --sec-color: #6c63ff;
+    --bg-color: #f7f7f7;
     --pri-color: #fff;
     --width: min(88vw, 1200px);
     --set-shadow: 4px 4px 5px #3332;
@@ -22,7 +20,7 @@ html {
     accent-color: var(--sec-color);
 }
 
-.comments *::-webkit-scrollbar {
+*::-webkit-scrollbar {
     display: none;
 }
 
@@ -40,7 +38,7 @@ body, ::-webkit-scrollbar-track {
 
 body {
     font-family: var(--font-mono);
-    color: var(--sec-color);
+    color: #333;
 }
 
 img {
