@@ -1,16 +1,9 @@
 <script>
-    export let inverse = false;
-    export let type = 'button'
-    export let small = true;
-    export let full = false;
+    export const lightBtn = true;
+    export const errBtn = false;
 </script>
 
-<button 
-    class={`${small ? 'text-sm' : ''} ${full ? 'w-full' : ''}`}
-    class:inverse={inverse}
-    type={type === 'button' ? 'button' : 'submit'}
-    on:click
->
+<button class="btn-active" class:light={lightBtn} class:err={errBtn}>
     <slot></slot>
 </button>
 
@@ -18,32 +11,25 @@
     button {
         background-color: var(--sec-color);
         border: 2px solid transparent;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        color: var(--pri-color);
-        padding: 5px 12px;
+        color: var(--bg-color);
+        padding: 5px 15px;
         cursor: pointer;
-        border-radius: 6px;
+        transition: 150ms ease-in-out;
         transition: 150ms ease-in-out;
     }
-    button.inverse {
+
+    .btn-active.light:hover, .btn-active.err:hover {
+        border: 2px solid var(--sec-color);
+        color: var(--sec-color);
+    }
+
+    .btn-active:hover {
         background-color: transparent;
         border: 2px solid var(--sec-color);
         color: var(--sec-color);
     }
-    button:active {
+    
+    .btn-active:active {
         scale: .97;
-    }
-    button:hover {
-        background-color: transparent;
-        border: 2px solid var(--sec-color);
-        color: var(--sec-color);
-    }
-    button.inverse:hover {
-        background-color: var(--sec-color);
-        border: 2px solid transparent;
-        color: var(--pri-color);
     }
 </style>

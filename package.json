@@ -10,7 +10,8 @@
 		"prepare": "svelte-kit sync || echo ''",
 		"format": "prettier --write .",
 		"lint": "prettier --check .",
-		"serve-json": "set PORT=4000 && json-server --watch data.json"
+		"serve-json": "set PORT=4000 && json-server --watch data2.json",
+		"install": "npm install --legacy-peer-deps"
 	},
 	"devDependencies": {
 		"@skeletonlabs/skeleton": "^3.1.2",
@@ -29,7 +30,12 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
+		"@emailjs/browser": "^4.4.1",
 		"@lucide/svelte": "^0.488.0",
+		"@supabase/supabase-js": "^2.53.0",
+		"chart.js": "^4.5.0",
+		"chat.js": "^1.0.2",
+		"emailjs-com": "^3.2.0",
 		"json-server": "^1.0.0-beta.3",
 		"svelte-french-toast": "^1.2.0",
 		"toastify-js": "^1.12.0"

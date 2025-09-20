@@ -3,10 +3,9 @@
 @plugin '@tailwindcss/typography';
 
 :root {
-    --sec-color: #6c63ff;
-    --bg-color: #f7f7f7;
-    --pri-color: #fff;
-    --width: min(88vw, 1200px);
+    --sec-color: #222d52;
+    --bg-color: #f9f6ef;
+    --width: min(85vw, 1100px);
     --set-shadow: 4px 4px 5px #3332;
     --gap: 60px;
 }
@@ -15,13 +14,9 @@ html {
     scroll-behavior: smooth;
 }
 
-* input:focus, * textarea:focus {
-    outline: 2px solid var(--sec-color);
-    accent-color: var(--sec-color);
-}
-
-*::-webkit-scrollbar {
-    display: none;
+* {
+    transition: color 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
 }
 
 ::-webkit-scrollbar {
@@ -30,6 +25,7 @@ html {
 
 ::-webkit-scrollbar-thumb {
 	background-color: var(--sec-color);
+    border-radius: 100vmax;
 }
 
 body, ::-webkit-scrollbar-track {
@@ -38,14 +34,38 @@ body, ::-webkit-scrollbar-track {
 
 body {
     font-family: var(--font-mono);
-    color: #333;
+    color: var(--sec-color);
 }
 
 img {
     object-fit: cover;
-    width: 100%;
-    height: 100%;    
     border-radius: inherit;
+}
+
+nav svg {
+    pointer-events: none;
+}
+
+article > section {
+    scroll-margin-top: 100px;
+}
+
+/* animations */
+.toScrollAnimate {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 30%;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.55;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
 }
 
 @media(prefers-reduced-motion) {

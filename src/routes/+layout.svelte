@@ -1,34 +1,30 @@
 <script>
-	import '../app.css';
-	import { page } from '$app/stores';
-	import { fade } from 'svelte/transition';
+	import Footer from '$lib/components/Footer.svelte';
 	import Header from '$lib/components/Header.svelte';
-	import { Toaster } from "svelte-french-toast";
+	import Navbar from '$lib/components/Navbar.svelte';
+	import '../app.css';
 </script>
 
 <svelte:head>
-    <title>Expense Tracker</title>
+    <title>Hali.dev 🫡</title>
 </svelte:head>
 
-<Toaster/>
 
-<div class="layout">
+<main>
 	<Header/>
+	<Navbar/>
+	
+	<article>
+		<slot></slot>
+	</article>
 
-	{#key $page.url.pathname}
-		<main in:fade={{duration: 300}}>
-			<slot></slot>
-		</main>
-	{/key}
-</div>
-
+	<Footer/>
+</main>
+ 
 <style>
-	.layout {
+	article {
 		display: grid;
-		grid-gap: 30px;
-		grid-template-rows: auto 1fr;
-		grid-template-columns: var(--width);
-		justify-content: center;
-		padding-bottom: 30px;
+		grid-gap: var(--gap);
+		margin-bottom: var(--gap);
 	}
 </style>

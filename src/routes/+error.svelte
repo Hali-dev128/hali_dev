@@ -5,15 +5,19 @@
 
 <section id="err-page" class="err-page">
     <div>
-        <h1 class="font-bold text-5xl mb-3">{$page.status}: {$page.error.message}</h1>
+        <h1 class="font-bold text-3xl mb-3">{$page.status}: {$page.error.message}</h1>
         <a href="/">
-            <Button small={false}>Go Home</Button>
+            <Button errBtn={true}>Go Home</Button>
         </a>
     </div>
 </section>
 
 <style>
-    .err-page {
-        margin: var(--gap) 0;
+    section {
+        width: var(--width);
+        height: 75vh;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
     }
 </style>

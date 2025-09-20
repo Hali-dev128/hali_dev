@@ -1,30 +1,50 @@
 <script>
-	import { goto, replaceState } from "$app/navigation";
-	import Button from "$lib/shared/Button.svelte";
-	import toast from "svelte-french-toast";
-	import { User } from "$lib/stores/ExpenseStore";
+    $: theme = 'light';
+
+    const handleTheme = e => {
+        if (theme === 'dark') {
+            theme = 'light';
+            document.documentElement.style.setProperty('--sec-color', '#222d52');
+            document.documentElement.style.setProperty('--bg-color', '#f9f6ef');
+            document.querySelector('nav').style.boxShadow = '4px 4px 5px #3332'
+        } else {
+            theme = 'dark';
+            document.documentElement.style.setProperty('--sec-color', '#f9f6ef');
+            document.documentElement.style.setProperty('--bg-color', '#222d52');
+            document.querySelector('nav').style.boxShadow = '2px 2px 8px #fff5'
+        }
+    }
 </script>
 
-<header class="flex justify-between gap-8 pt-8 items-center">
-    <h1 class="font-bold text-xl flex gap-2 cursor-default">
-        <svg data-v-14c8c335="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house-icon lucide-house lucide-icon customizable"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
-        HomeBudget
-    </h1>
+<header>
+    <div>
+        <h1>Hali.dev</h1>
 
-    {#if $User.length}
-        <Button small={false} on:click={() => {
-            toast.success(`Logged out`)
-            User.reset();
-            goto('/', {replaceState: true});
-        }}>
-            Logout
-            <svg data-v-14c8c335="" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash2-icon lucide-trash-2 lucide-icon customizable"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path><line x1="10" x2="10" y1="11" y2="17"></line><line x1="14" x2="14" y1="11" y2="17"></line></svg>
-        </Button>
-    {/if}
+        <button class="cursor-pointer btn-active" on:click={handleTheme}>
+            {#if theme === 'dark'}
+                <svg data-v-14c8c335="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-icon lucide-sun lucide-icon customizable"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
+                {:else if theme === 'light'}
+                <svg data-v-14c8c335="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon-icon lucide-moon lucide-icon customizable"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+            {/if}
+        </button>
+    </div>
 </header>
 
 <style>
-    h1 > svg {
-        color: var(--sec-color);
+    header {
+        position: sticky;
+        z-index: 99;
+        top: 0;
+        background: var(--sec-color);
+        color: var(--bg-color);
+    }
+
+    header > div {
+        width: var(--width);
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 0;
     }
 </style>
