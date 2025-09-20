@@ -3,7 +3,10 @@
 	import Header from '$lib/components/Header.svelte';
 	import Navbar from '$lib/components/Navbar.svelte';
 	import '../app.css';
+	import { Toaster } from 'svelte-french-toast';
 </script>
+
+<Toaster />
 
 <svelte:head>
     <title>Hali.dev 🫡</title>
