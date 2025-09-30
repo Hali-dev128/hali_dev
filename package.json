@@ -10,8 +10,7 @@
 		"prepare": "svelte-kit sync || echo ''",
 		"format": "prettier --write .",
 		"lint": "prettier --check .",
-		"serve-json": "set PORT=4000 && json-server --watch data2.json",
-		"install": "npm install --legacy-peer-deps"
+		"serve-json": "set PORT=4000 && json-server --watch data2.json"
 	},
 	"devDependencies": {
 		"@skeletonlabs/skeleton": "^3.1.2",
