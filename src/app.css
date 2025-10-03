@@ -5,6 +5,7 @@
 :root {
     --sec-color: #222d52;
     --bg-color: #f9f6ef;
+    --text: #222d52;
     --width: min(85vw, 1100px);
     --set-shadow: 4px 4px 5px #3332;
     --gap: 60px;
@@ -55,6 +56,11 @@ article > section {
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0 cover 30%;
+}
+.toScrollAnimate2 {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 10%;
 }
 
 @keyframes appear {
