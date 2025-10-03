@@ -42,7 +42,7 @@
 
 <section id="Contact">
     <form on:submit={handleSubmit}>
-        <h2 class="text-2xl font-bold">Ready to launch your first website?</h2>
+        <h2 class="text-2xl font-bold bright currColor">Ready to launch your first website?</h2>
 
         <input type="text" bind:value={name} name="name" placeholder="Full Name *" required>
         <input type="email" bind:value={title} name="email" placeholder="Email *" required>
@@ -60,7 +60,14 @@
 
     section form input, section form textarea {
         background-color: var(--sec-color);
-        color: var(--bg-color);
+        border-radius: 10px;
+        box-shadow: var(--set-shadow);
+        color: #fff;
+    }
+
+    section form textarea {
+        resize: none;
+        height: 180px;
     }
 
     section form {
