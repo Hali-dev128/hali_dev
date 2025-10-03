@@ -6,8 +6,8 @@
     <div>
         <h1 class="text-4xl font-bold">Hali.dev</h1>
         <span class="text-xl">
-            <p>Clean, fast websites for small businesses.</p>
-            <p>Helping startups and students yet online with simple, modern design.</p>
+            <p>Clean, fast websites for businesses.</p>
+            <p>Helping businesses online with simple, modern designs.</p>
         </span>
         <a href="#Contact" aria-label="Contact">
             <Button>Lets work Together</Button>
