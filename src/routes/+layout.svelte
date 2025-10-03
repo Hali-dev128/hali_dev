@@ -9,7 +9,7 @@
 <Toaster />
 
 <svelte:head>
-    <title>Hali.dev 🫡</title>
+    <title>Hali.dev</title>
 </svelte:head>
 
 
