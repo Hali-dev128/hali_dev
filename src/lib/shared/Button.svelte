@@ -3,7 +3,7 @@
     export const errBtn = false;
 </script>
 
-<button class="btn-active" class:light={lightBtn} class:err={errBtn}>
+<button class="bright btn-active" class:light={lightBtn} class:err={errBtn}>
     <slot></slot>
 </button>
 
@@ -16,6 +16,7 @@
         cursor: pointer;
         transition: 150ms ease-in-out;
         transition: 150ms ease-in-out;
+        border-radius: 10px;
     }
 
     .btn-active.light:hover, .btn-active.err:hover {
@@ -23,7 +24,7 @@
         color: var(--sec-color);
     }
 
-    .btn-active:hover {
+    .btn-active:hover, .bright:hover {
         background-color: transparent;
         border: 2px solid var(--sec-color);
         color: var(--sec-color);
