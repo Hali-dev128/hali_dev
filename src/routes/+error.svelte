@@ -5,7 +5,7 @@
 
 <section id="err-page" class="err-page">
     <div>
-        <h1 class="font-bold text-3xl mb-3">{$page.status}: {$page.error.message}</h1>
+        <h1 class="font-bold text-3xl mb-3 bright currColor">{$page.status}: {$page.error.message}</h1>
         <a href="/">
             <Button errBtn={true}>Go Home</Button>
         </a>
