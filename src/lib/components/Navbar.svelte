@@ -31,7 +31,8 @@
                 const navLink = document.querySelector(`a[href="#${id}"] li.link`);
                 if (entry.isIntersecting) {
                     lis.forEach(l => l.classList.remove('active'));
-                    navLink.classList.add('active')
+                    // @ts-ignore
+                    navLink.classList.add('active');
                 }
             })
         });
@@ -44,7 +45,7 @@
     <ul>
         {#each links as link}    
             <a href={`#${link.link}`} title={`${link.link}`} aria-label={`${link.link}`}>
-                <li class={`link`}>
+                <li class={`bright link`}>
                     {@html link.html}
                 </li>
             </a>
@@ -84,6 +85,6 @@
 
     li.active, nav ul li:hover {
         background-color: var(--sec-color);
-        color: var(--bg-color);
+        color: #fff !important;
     }
 </style>
