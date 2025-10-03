@@ -1,9 +1,5 @@
-<script>
-
-</script>
-
 <footer>
-    <p>&copy; Hali.dev, Made by Odumu Muhammad Halidu</p>
+    <p class="bright">&copy; Hali.dev, Made by Odumu Muhammad Halidu.</p>
 </footer>
 
 <style>
